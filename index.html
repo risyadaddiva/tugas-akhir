@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee New Cammary | Pemesanan</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-shape"></div>
+    <main class="container">
+      <header class="hero">
+        <p class="badge">Pemesanan Cepat Tanpa Login</p>
+        <h1>Coffee New Cammary</h1>
+        <p class="address">
+          Jl. Manisi, Cipadung, Kec. Cibiru, Kota Bandung, Jawa Barat 40614
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>1) Data Pemesan</h2>
+        <label for="customerName">Nama Pemesan</label>
+        <input id="customerName" type="text" placeholder="Contoh: Budi" required />
+      </section>
+
+      <section class="card">
+        <h2>2) Pilih Menu</h2>
+        <p class="hint">Gunakan tombol + / - untuk mengatur jumlah pesanan.</p>
+        <div id="menuContainer" class="menu-container"></div>
+      </section>
+
+      <section class="card summary">
+        <h2>3) Pembayaran</h2>
+        <div class="payment-options">
+          <label>
+            <input type="radio" name="payment" value="Cash" checked />
+            Cash
+          </label>
+          <label>
+            <input type="radio" name="payment" value="QRIS" />
+            QRIS
+          </label>
+        </div>
+
+        <div id="qrisSection" class="qris-section hidden">
+          <h3>Scan QRIS</h3>
+          <img src="assets/qris-barcode.svg" alt="Barcode QRIS Coffee New Cammary" />
+          <p>
+            Setelah transfer, klik tombol <strong>Konfirmasi ke WhatsApp</strong> untuk
+            kirim bukti pembayaran.
+          </p>
+        </div>
+
+        <div class="totals">
+          <p>Total Item: <strong id="totalItems">0</strong></p>
+          <p>Total Bayar: <strong id="totalPrice">Rp0</strong></p>
+        </div>
+
+        <button id="orderBtn" class="btn-primary">Konfirmasi ke WhatsApp</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
